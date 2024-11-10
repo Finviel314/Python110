@@ -1,8 +1,11 @@
 # ------------------------------------------------------------------------------------------ #
-# Title: Assignment05
-# Desc: This assignment adds dictionaries and error handling
+# Title: Assignment04
+# Desc: This assignment demonstrates using lists to store and recapitulate information
 # Change Log: (Who, When, What)
 #  #  Andrew Yarberry, 11/07/2024, Initial Release
+# TO DO LIST
+# How to test error handling?
+# Need to figure out GIT
 # ------------------------------------------------------------------------------------------ #
 
 # Define the Data Constants
@@ -28,7 +31,7 @@ csv_data: str = ''
 
 try:
     with open(FILE_NAME, 'r') as file_obj:  # With open will auto close the file
-        for line in file_obj.readlines():  # steps through the file and reads each line appending data to students
+        for line in file_obj.readlines():  # steps through file and reads each line appending data to students
             student = line.strip().split(',')
             student_data = {'first_name':student[0], 'last_name':student[1],'course_name':student[2]}
             students.append(student_data)
@@ -45,26 +48,30 @@ while True:
     print(MENU)
     menu_choice = input('Please enter a selection: ')
 
-    # Get data from the user and append it with current data in the file
+    # Get data from the user and append with current data in file
     #Added error handling but does not loop back through to reenter
     if menu_choice == '1':
-        try:
-            student_first_name = input('Input your first name: ')
-            if not student_first_name.isalpha():
-                raise ValueError("There first name must be alphabetic")
-        except ValueError as e:
-                    print(e)
-        try:
-            student_last_name = input('Input your last name: ')
-            if not student_first_name.isalpha():
-                raise ValueError("There first name must be alphabetic")
-        except ValueError as e:
-                    print(e)
+        while True:
+            try:
+                student_first_name = input('Input your first name: ')
+                if not student_first_name.isalpha():
+                    raise ValueError("Name must be alphabetic")
+                break
+            except ValueError as e:
+                        print(e)
+        while True:
+            try:
+                student_last_name = input('Input your last name: ')
+                if not student_last_name.isalpha():
+                    raise ValueError("Name must be alphabetic")
+                break
+            except ValueError as e:
+                        print(e)
         course_name = input('Input course: ')
         student_data = {'first_name': student_first_name,
                             'last_name': student_last_name,
                             'course_name':course_name}
-        students.append(student_data)  # This will add the user information to the list of lists
+        students.append(student_data)  # this will add the user information to the list of lists
 
     # Print current data to screen
     elif menu_choice == '2':
