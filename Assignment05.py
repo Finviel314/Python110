@@ -1,11 +1,8 @@
 # ------------------------------------------------------------------------------------------ #
-# Title: Assignment04
+# Title: Assignment05
 # Desc: This assignment demonstrates using lists to store and recapitulate information
 # Change Log: (Who, When, What)
 #  #  Andrew Yarberry, 11/07/2024, Initial Release
-# TO DO LIST
-# How to test error handling?
-# Need to figure out GIT
 # ------------------------------------------------------------------------------------------ #
 
 # Define the Data Constants
