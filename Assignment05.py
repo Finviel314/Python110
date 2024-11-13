@@ -3,6 +3,7 @@
 # Desc: This assignment demonstrates using lists to store and recapitulate information
 # Change Log: (Who, When, What)
 #  #  Andrew Yarberry, 11/07/2024, Initial Release
+
 # ------------------------------------------------------------------------------------------ #
 
 # Define the Data Constants
@@ -46,7 +47,7 @@ while True:
     menu_choice = input('Please enter a selection: ')
 
     # Get data from the user and append with current data in file
-    #Added error handling but does not loop back through to reenter
+
     if menu_choice == '1':
         while True:
             try:
