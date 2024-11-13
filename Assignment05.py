@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------------------ #
 # Title: Assignment05
-# Desc: This assignment demonstrates using lists to store and recapitulate information
+# Desc: This assignment demonstrates using a dictionary instead of lists and adds error handling
 # Change Log: (Who, When, What)
 #  #  Andrew Yarberry, 11/07/2024, Initial Release
 
